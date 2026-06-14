@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Student\\source\\repos\\CyberSecurityBotGUI\\CyberSecurityBotGUI.csproj": {}
+    "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\CyberSecurityBotGUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Student\\source\\repos\\CyberSecurityBotGUI\\CyberSecurityBotGUI.csproj": {
+    "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\CyberSecurityBotGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\source\\repos\\CyberSecurityBotGUI\\CyberSecurityBotGUI.csproj",
+        "projectUniqueName": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\CyberSecurityBotGUI.csproj",
         "projectName": "CyberSecurityBotGUI",
-        "projectPath": "C:\\Users\\Student\\source\\repos\\CyberSecurityBotGUI\\CyberSecurityBotGUI.csproj",
+        "projectPath": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\CyberSecurityBotGUI.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\source\\repos\\CyberSecurityBotGUI\\obj\\",
+        "outputPath": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

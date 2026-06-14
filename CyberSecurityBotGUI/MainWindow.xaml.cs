@@ -15,7 +15,17 @@ namespace CyberSecurityBotGUI
 
         SoundManager soundManager = new SoundManager();
 
+        TaskManager taskManager = new TaskManager();
+
+        QuizManager quizManager = new QuizManager();
+
+        ActivityLogger activityLogger = new ActivityLogger();
+
+        NLPManager nlpManager = new NLPManager();
+
         bool askedFavoriteTopic = false;
+
+        bool quizRunning = false;
 
         public MainWindow()
         {
@@ -23,184 +33,308 @@ namespace CyberSecurityBotGUI
 
             soundManager.PlayGreeting();
 
-            ChatArea.Text += " Bot: Welcome to the Cyber Bot!\n What is your name";
+            ChatArea.Text +=
+                "🤖 Welcome to the Cyber Security Awareness Bot!\n\n";
 
-           
+            ChatArea.Text +=
+                "I can help with:\n";
+
+            ChatArea.Text +=
+                "• Password Safety\n";
+
+            ChatArea.Text +=
+                "• Phishing\n";
+
+            ChatArea.Text +=
+                "• Malware\n";
+
+            ChatArea.Text +=
+                "• Privacy\n";
+
+            ChatArea.Text +=
+                "• Scams\n";
+
+            ChatArea.Text +=
+                "• Cybersecurity Quiz\n";
+
+            ChatArea.Text +=
+                "• Task Management\n";
+
+            ChatArea.Text +=
+                "• Activity Log\n\n";
+
+            ChatArea.Text +=
+                "What is your name?\n";
         }
 
-        private void SendButton_Click(object sender, RoutedEventArgs e)
+        private void BotReply(string message)
         {
-            string userMessage = UserInput.Text.ToLower();
+            ChatArea.Text += "\n🤖 Bot: " + message + "\n";
+        }
+
+        private void UserReply(string message)
+        {
+            ChatArea.Text += "\n👤 You: " + message + "\n";
+        }
+
+        
+private void SendButton_Click(object sender, RoutedEventArgs e)
+        {
+            string userMessage = UserInput.Text.ToLower().Trim();
 
             if (string.IsNullOrWhiteSpace(userMessage))
             {
-                ChatArea.Text += "🤖 Bot: Please enter a message.\n";
+                BotReply("Please enter a message.");
                 return;
             }
 
-            ChatArea.Text += "\n👤 You: " + userMessage + "\n";
+            UserReply(userMessage);
 
-            // USER NAME
+            activityLogger.AddLog("User typed: " + userMessage);
+
+            // Ask for user name
             if (string.IsNullOrEmpty(memoryManager.UserName))
             {
                 memoryManager.UserName = userMessage;
-
-                ChatArea.Text += $"🤖 Bot: Welcome {memoryManager.UserName}!\n";
-
-
-
-                ChatArea.Text += "🤖 Bot: What is your favourite cybersecurity topic?\n PHISHING\n MELWARE\n PASSWAORD\n SOCIAL ENGINEERING\n PUBLIC WI-FI\n PRIVACY\n SCAM";
-
+                BotReply("Nice to meet you " + memoryManager.UserName + "!");
+                BotReply("What is your favourite cybersecurity topic?");
                 askedFavoriteTopic = true;
-
                 UserInput.Clear();
-
                 return;
             }
 
-            // FAVORITE TOPIC
+            // Favourite topic
             if (askedFavoriteTopic)
             {
                 memoryManager.FavoriteTopic = userMessage;
-
-                ChatArea.Text += $"🤖 Bot: Great! I'll remember that you are interested in {memoryManager.FavoriteTopic}.\n";
-
-                foreach (var keyword in keywordManager.keywordResponses)
-                {
-                    if (userMessage.Contains(keyword.Key))
-                    {
-                        ChatArea.Text += "🤖 Bot: " + keyword.Value + "\n";
-                    }
-                }
-
+                BotReply("Great! I'll remember that you like " + memoryManager.FavoriteTopic + ".");
+                activityLogger.AddLog("Favourite topic saved.");
                 askedFavoriteTopic = false;
-
                 UserInput.Clear();
-
                 return;
             }
 
-            // SENTIMENT DETECTION
-            string sentiment = sentimentManager.DetectSentiment(userMessage);
+            // NLP Detection
+            string intent = nlpManager.DetectIntent(userMessage);
+
+            if (intent == "LOG")
+            {
+                BotReply(activityLogger.ShowLogs());
+                UserInput.Clear();
+                return;
+            }
+
+            if (intent == "QUIZ")
+            {
+                quizRunning = true;
+                quizManager.CurrentQuestion = 0;
+                quizManager.Score = 0;
+
+                QuizQuestion q = quizManager.Questions[0];
+
+                string text =
+                    q.Question + "\n\n" +
+                    string.Join("\n", q.Options);
+
+                BotReply(text);
+
+                activityLogger.AddLog("Quiz Started");
+
+                UserInput.Clear();
+                return;
+            }
+
+            // Quiz answers
+            if (quizRunning)
+            {
+                QuizQuestion q =
+                    quizManager.Questions[quizManager.CurrentQuestion];
+
+                int answer = -1;
+
+                if (userMessage == "a") answer = 0;
+                if (userMessage == "b") answer = 1;
+                if (userMessage == "c") answer = 2;
+                if (userMessage == "d") answer = 3;
+
+                if (answer == q.CorrectAnswer)
+                {
+                    quizManager.Score++;
+                    BotReply("✅ Correct!\n" + q.Explanation);
+                }
+                else
+                {
+                    BotReply("❌ Incorrect.\n" + q.Explanation);
+                }
+
+                quizManager.CurrentQuestion++;
+
+                if (quizManager.CurrentQuestion >= quizManager.Questions.Count)
+                {
+                    BotReply("Quiz Finished!");
+
+                    BotReply("Final Score: "
+                        + quizManager.Score
+                        + "/"
+                        + quizManager.Questions.Count);
+
+                    activityLogger.AddLog("Quiz Completed");
+
+                    quizRunning = false;
+                }
+                else
+                {
+                    QuizQuestion next =
+                        quizManager.Questions[quizManager.CurrentQuestion];
+
+                    BotReply(
+                        next.Question +
+                        "\n\n" +
+                        string.Join("\n", next.Options));
+                }
+
+                UserInput.Clear();
+                return;
+            }
+
+            // Sentiment
+            string sentiment =
+                sentimentManager.DetectSentiment(userMessage);
 
             if (sentiment == "worried")
             {
-                ChatArea.Text += "🤖 Bot: It's understandable to feel worried about cybersecurity threats.\n";
-
-                ChatArea.Text += "🤖 Bot: Always stay alert and avoid suspicious links.\n";
-
+                BotReply("It's understandable to feel worried. Stay alert and avoid suspicious links.");
                 UserInput.Clear();
-
                 return;
             }
 
-            else if (sentiment == "frustrated")
+            if (sentiment == "curious")
             {
-                ChatArea.Text += "🤖 Bot: Cybersecurity can feel overwhelming sometimes, but learning step-by-step helps.\n";
-
+                BotReply("Curiosity helps you become cyber aware!");
                 UserInput.Clear();
-
                 return;
             }
 
-            else if (sentiment == "curious")
+            if (sentiment == "frustrated")
             {
-                ChatArea.Text += "🤖 Bot: Curiosity is great! Learning cybersecurity helps keep you safe online.\n";
-
+                BotReply("Cybersecurity takes practice. Keep learning!");
                 UserInput.Clear();
-
                 return;
             }
 
-            // RANDOM PHISHING TIPS
-            if (userMessage.Contains("phishing tip"))
-            {
-                ChatArea.Text += "🤖 Bot: " + responseManager.GetRandomPhishingTip() + "\n";
-
-                UserInput.Clear();
-
-                return;
-            }
-
-            // RANDOM PASSWORD TIPS
-            if (userMessage.Contains("password tip"))
-            {
-                ChatArea.Text += "🤖 Bot: " + responseManager.GetRandomPasswordTip() + "\n";
-
-                UserInput.Clear();
-
-                return;
-            }
-
-            // MEMORY RECALL
+            // Remember
             if (userMessage.Contains("remember"))
             {
-                ChatArea.Text += $"🤖 Bot: I remember that your favourite topic is {memoryManager.FavoriteTopic}.\n";
-
+                BotReply("I remember that your favourite topic is " + memoryManager.FavoriteTopic);
                 UserInput.Clear();
-
                 return;
             }
 
-            // CONVERSATION FLOW
+            // Tell me more
             if (userMessage.Contains("tell me more")
                 || userMessage.Contains("another tip")
                 || userMessage.Contains("explain more"))
             {
-                ChatArea.Text += $"🤖 Bot: Since you are interested in {memoryManager.FavoriteTopic}, always stay alert online and avoid suspicious links.\n";
-
+                BotReply("Since you like " + memoryManager.FavoriteTopic +
+                    ", always stay alert online.");
                 UserInput.Clear();
-
                 return;
             }
 
-            // KEYWORD RESPONSES
-            bool found = false;
-
+            // Keyword detection
             foreach (var keyword in keywordManager.keywordResponses)
             {
                 if (userMessage.Contains(keyword.Key))
                 {
-                    ChatArea.Text += "🤖 Bot: " + keyword.Value + "\n";
-
-                    found = true;
-
-                    break;
+                    BotReply(keyword.Value);
+                    UserInput.Clear();
+                    return;
                 }
             }
 
-            // DEFAULT RESPONSE
-            if (!found)
-            {
-                ChatArea.Text += "🤖 Bot: I’m not sure I understand. Can you try rephrasing?\n";
-            }
+            BotReply("I'm not sure I understand. Could you rephrase that?");
 
             UserInput.Clear();
         }
 
+        
+private void AddTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+            taskManager.AddTask(
+                "Review Privacy Settings",
+                "Check all social media privacy settings.",
+                "7 days");
+
+            activityLogger.AddLog("Task Added");
+
+            BotReply("Task added successfully!");
+        }
+
+        private void ViewTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+            BotReply(taskManager.ViewTasks());
+
+            activityLogger.AddLog("Viewed Tasks");
+        }
+
+        private void QuizButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (quizManager.Questions.Count == 0)
+            {
+                BotReply("No quiz questions available.");
+                return;
+            }
+
+            quizRunning = true;
+
+            quizManager.CurrentQuestion = 0;
+
+            quizManager.Score = 0;
+
+            QuizQuestion q = quizManager.Questions[0];
+
+            BotReply(
+                q.Question +
+                "\n\n" +
+                string.Join("\n", q.Options));
+
+            activityLogger.AddLog("Quiz Started");
+        }
+
+        private void LogButton_Click(object sender, RoutedEventArgs e)
+        {
+            BotReply(activityLogger.ShowLogs());
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            ChatArea.Clear();
+        }
+
         private void PhishingButton_Click(object sender, RoutedEventArgs e)
         {
-            ChatArea.Text += "\n🤖 Bot: Phishing is a cyberattack where scammers trick users into revealing sensitive information.\n";
+            BotReply("Phishing is a cyberattack where criminals trick users into revealing personal information through fake emails or websites.");
         }
 
         private void MalwareButton_Click(object sender, RoutedEventArgs e)
         {
-            ChatArea.Text += "\n🤖 Bot: Malware is harmful software designed to damage systems or steal information.\n";
+            BotReply("Malware is malicious software designed to damage systems, steal data, or spy on users.");
         }
 
         private void PasswordButton_Click(object sender, RoutedEventArgs e)
         {
-            ChatArea.Text += "\n🤖 Bot: Always use strong and unique passwords with symbols and numbers.\n";
+            BotReply("Use strong passwords with uppercase letters, lowercase letters, numbers and symbols. Never reuse passwords.");
         }
 
         private void PrivacyButton_Click(object sender, RoutedEventArgs e)
         {
-            ChatArea.Text += "\n🤖 Bot: Protect your privacy by limiting personal information shared online.\n";
+            BotReply("Protect your privacy by limiting personal information shared online and checking your account privacy settings regularly.");
         }
 
         private void ScamButton_Click(object sender, RoutedEventArgs e)
         {
-            ChatArea.Text += "\n🤖 Bot: Be cautious of online scams and suspicious links.\n";
+            BotReply("Online scams often pretend to be trusted companies. Never click suspicious links or share sensitive information.");
         }
+
     }
 }
