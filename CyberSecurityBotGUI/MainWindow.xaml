@@ -15,85 +15,92 @@
         </Grid.ColumnDefinitions>
 
         <!-- LEFT MENU -->
-        <StackPanel Grid.Column="0" Background="#263238" Grid.ColumnSpan="2" Margin="-5,-10,5,10">
+        <ScrollViewer Grid.Column="0"
+              VerticalScrollBarVisibility="Auto"
+              HorizontalScrollBarVisibility="Disabled" Grid.ColumnSpan="2" Margin="0,0,56,0" Height="684" VerticalAlignment="Bottom">
+            <StackPanel Grid.Column="0" Background="#263238" Grid.ColumnSpan="2" Margin="-5,-10,5,10" RenderTransformOrigin="0.509,0.463" Width="173">
 
-            <!-- BOT IMAGE -->
+                <!-- BOT IMAGE -->
+
+                <!-- BOT IMAGE -->
 
 
-            <Image Source="/images/bot.png"
-                   Width="138"
-                   Height="42"
+                <Image Source="/images/bot.png"
+                   Width="205"
+                   Height="211"
                    />
 
-            <Separator Margin="10"/>
+                <Separator Margin="10"/>
 
-            <!-- PART 2 -->
+                <!-- PART 2 -->
 
-            <Button Name="PhishingButton"
-                    Content="🎣 Phishing"
+                <Button x:Name="PhishingButton"
+                    Content=" Phishing"
                     Margin="8"
                     Height="40"
                     Click="PhishingButton_Click"/>
 
-            <Button Name="MalwareButton"
-                    Content="🦠 Malware"
+                <Button x:Name="MalwareButton"
+                    Content=" Malware"
                     Margin="8"
                     Height="40"
                     Click="MalwareButton_Click"/>
 
-            <Button Name="PasswordButton"
-                    Content="🔑 Password Safety"
+                <Button x:Name="PasswordButton"
+                    Content=" Password Safety"
                     Margin="8"
                     Height="40"
                     Click="PasswordButton_Click"/>
 
-            <Button Name="PrivacyButton"
-                    Content="🔒 Privacy"
+                <Button x:Name="PrivacyButton"
+                    Content=" Privacy"
                     Margin="8"
                     Height="40"
                     Click="PrivacyButton_Click"/>
 
-            <Button Name="ScamButton"
-                    Content="⚠ Scam Awareness"
+                <Button x:Name="ScamButton"
+                    Content=" Scam Awareness"
                     Margin="8"
                     Height="40"
                     Click="ScamButton_Click"/>
 
-            <Separator Margin="10"/>
+                <Separator Margin="10"/>
 
-            <!-- PART 3 -->
+                <!-- PART 3 -->
 
-            <Button Name="AddTaskButton"
-                    Content="📋 Add Task"
+                <Button x:Name="AddTaskButton"
+                    Content=" Add Task"
                     Margin="8"
                     Height="40"
                     Click="AddTaskButton_Click"/>
 
-            <Button Name="ViewTaskButton"
-                    Content="📂 View Tasks"
+                <Button x:Name="ViewTaskButton"
+                    Content="View Tasks"
                     Margin="8"
                     Height="40"
                     Click="ViewTaskButton_Click"/>
 
-            <Button Name="QuizButton"
-                    Content="🎮 Start Quiz"
+                <Button x:Name="QuizButton"
+                    Content=" Start Quiz"
                     Margin="8"
                     Height="40"
                     Click="QuizButton_Click"/>
 
-            <Button Name="LogButton"
-                    Content="📝 Activity Log"
+                <Button x:Name="LogButton"
+                    Content="Activity Log"
                     Margin="8"
                     Height="40"
                     Click="LogButton_Click"/>
 
-            <Button Name="ClearButton"
-                    Content="🗑 Clear Chat"
+                <Button x:Name="ClearButton"
+                    Content="Clear Chat"
                     Margin="8"
                     Height="40"
                     Click="ClearButton_Click"/>
 
-        </StackPanel>
+            </StackPanel>
+
+        </ScrollViewer>
 
         <!-- RIGHT SIDE -->
 
