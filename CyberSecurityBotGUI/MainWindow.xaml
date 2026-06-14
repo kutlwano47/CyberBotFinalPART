@@ -1,0 +1,130 @@
+﻿<Window x:Class="CyberSecurityBotGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cyber Security Assistant"
+        Height="600"
+        Width="1000"
+        Background="RED">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- LEFT PANEL -->
+        <Border Background="Black"
+                Padding="15" Height="660" VerticalAlignment="Top">
+
+            <StackPanel>
+
+                <!-- BOT IMAGE -->
+
+                <!-- TITLE -->
+                <!-- BOT IMAGE -->
+
+                <!-- TITLE -->
+                <!-- BOT IMAGE -->
+
+                <!-- TITLE -->
+                <!-- BOT IMAGE -->
+                <Image Source="/images/bot.png"
+                       Width="284"
+                       Height="168"
+                       />
+
+                <!-- TITLE -->
+                <TextBlock Text=" ASSISTANT BOT"
+                           Foreground="Red"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           TextAlignment="Center"
+                           Margin="0,20" Width="185"/>
+
+                <!-- BUTTONS -->
+
+                <Button x:Name="PhishingButton"
+                        Content=" Phishing"
+                        Height="45"
+                        Margin="0,10"
+                        Background="Red"
+                        Click="PhishingButton_Click"/>
+
+                <Button x:Name="MalwareButton"
+                        Content=" Malware"
+                        Height="45"
+                        Background="Yellow"
+                        Margin="0,10"
+                        Click="MalwareButton_Click"/>
+
+                <Button x:Name="PasswordButton"
+                        Content=" Password Safety"
+                        Height="45"
+                        Margin="0,10"
+                        Background="Green"
+                        Click="PasswordButton_Click"/>
+
+                <Button x:Name="PrivacyButton"
+                        Content=" Privacy"
+                        Height="45"
+                        Margin="0,10"
+                        Background="Blue"
+                        Click="PrivacyButton_Click"/>
+
+                <Button x:Name="ScamButton"
+                        Content=" Scam Awareness"
+                        Height="45"
+                        Margin="0,10"
+                        Background="LightPink"
+                        Click="ScamButton_Click"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <!-- RIGHT SIDE -->
+        <Grid Grid.Column="1"
+              Margin="10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+
+            <!-- CHAT AREA -->
+            <TextBox x:Name="ChatArea"
+                     Grid.Row="0"
+                     Background="#2B2B2B"
+                     Foreground="LawnGreen"
+                     FontSize="16"
+                     IsReadOnly="True"
+                     TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto"
+                     Margin="10"/>
+
+            <!-- INPUT -->
+            <Grid Grid.Row="1">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="UserInput"
+                         FontSize="16"
+                         Margin="10"/>
+
+                <Button x:Name="SendButton"
+                        Grid.Column="1"
+                        Content="Send"
+                        FontSize="16"
+                        Margin="10"
+                        Click="SendButton_Click"/>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>
