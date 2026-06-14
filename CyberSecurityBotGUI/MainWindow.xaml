@@ -1,125 +1,153 @@
 ﻿<Window x:Class="CyberSecurityBotGUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Cyber Security Assistant"
-        Height="600"
-        Width="1000"
-        Background="RED">
+        Title="Cyber Security Awareness Bot"
+        Height="700"
+        Width="1100"
+        WindowStartupLocation="CenterScreen">
 
-    <Grid>
+    <Grid Background="#EAEFF2">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="139"/>
+            <ColumnDefinition Width="111"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <!-- LEFT PANEL -->
-        <Border Background="Black"
-                Padding="15" Height="660" VerticalAlignment="Top">
+        <!-- LEFT MENU -->
+        <StackPanel Grid.Column="0" Background="#263238" Grid.ColumnSpan="2" Margin="-5,-10,5,10">
 
-            <StackPanel>
+            <!-- BOT IMAGE -->
 
-                <!-- BOT IMAGE -->
 
-                <!-- TITLE -->
-                <!-- BOT IMAGE -->
+            <Image Source="/images/bot.png"
+                   Width="138"
+                   Height="42"
+                   />
 
-                <!-- TITLE -->
-                <!-- BOT IMAGE -->
+            <Separator Margin="10"/>
 
-                <!-- TITLE -->
-                <!-- BOT IMAGE -->
-                <Image Source="/images/bot.png"
-                       Width="284"
-                       Height="168"
-                       />
+            <!-- PART 2 -->
 
-                <!-- TITLE -->
-                <TextBlock Text=" ASSISTANT BOT"
-                           Foreground="Red"
-                           FontSize="24"
-                           FontWeight="Bold"
-                           TextAlignment="Center"
-                           Margin="0,20" Width="185"/>
+            <Button Name="PhishingButton"
+                    Content="🎣 Phishing"
+                    Margin="8"
+                    Height="40"
+                    Click="PhishingButton_Click"/>
 
-                <!-- BUTTONS -->
+            <Button Name="MalwareButton"
+                    Content="🦠 Malware"
+                    Margin="8"
+                    Height="40"
+                    Click="MalwareButton_Click"/>
 
-                <Button x:Name="PhishingButton"
-                        Content=" Phishing"
-                        Height="45"
-                        Margin="0,10"
-                        Background="Red"
-                        Click="PhishingButton_Click"/>
+            <Button Name="PasswordButton"
+                    Content="🔑 Password Safety"
+                    Margin="8"
+                    Height="40"
+                    Click="PasswordButton_Click"/>
 
-                <Button x:Name="MalwareButton"
-                        Content=" Malware"
-                        Height="45"
-                        Background="Yellow"
-                        Margin="0,10"
-                        Click="MalwareButton_Click"/>
+            <Button Name="PrivacyButton"
+                    Content="🔒 Privacy"
+                    Margin="8"
+                    Height="40"
+                    Click="PrivacyButton_Click"/>
 
-                <Button x:Name="PasswordButton"
-                        Content=" Password Safety"
-                        Height="45"
-                        Margin="0,10"
-                        Background="Green"
-                        Click="PasswordButton_Click"/>
+            <Button Name="ScamButton"
+                    Content="⚠ Scam Awareness"
+                    Margin="8"
+                    Height="40"
+                    Click="ScamButton_Click"/>
 
-                <Button x:Name="PrivacyButton"
-                        Content=" Privacy"
-                        Height="45"
-                        Margin="0,10"
-                        Background="Blue"
-                        Click="PrivacyButton_Click"/>
+            <Separator Margin="10"/>
 
-                <Button x:Name="ScamButton"
-                        Content=" Scam Awareness"
-                        Height="45"
-                        Margin="0,10"
-                        Background="LightPink"
-                        Click="ScamButton_Click"/>
+            <!-- PART 3 -->
 
-            </StackPanel>
+            <Button Name="AddTaskButton"
+                    Content="📋 Add Task"
+                    Margin="8"
+                    Height="40"
+                    Click="AddTaskButton_Click"/>
 
-        </Border>
+            <Button Name="ViewTaskButton"
+                    Content="📂 View Tasks"
+                    Margin="8"
+                    Height="40"
+                    Click="ViewTaskButton_Click"/>
+
+            <Button Name="QuizButton"
+                    Content="🎮 Start Quiz"
+                    Margin="8"
+                    Height="40"
+                    Click="QuizButton_Click"/>
+
+            <Button Name="LogButton"
+                    Content="📝 Activity Log"
+                    Margin="8"
+                    Height="40"
+                    Click="LogButton_Click"/>
+
+            <Button Name="ClearButton"
+                    Content="🗑 Clear Chat"
+                    Margin="8"
+                    Height="40"
+                    Click="ClearButton_Click"/>
+
+        </StackPanel>
 
         <!-- RIGHT SIDE -->
-        <Grid Grid.Column="1"
-              Margin="10">
+
+        <Grid Grid.Column="2">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
                 <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
             </Grid.RowDefinitions>
 
-            <!-- CHAT AREA -->
-            <TextBox x:Name="ChatArea"
-                     Grid.Row="0"
-                     Background="#2B2B2B"
-                     Foreground="LawnGreen"
-                     FontSize="16"
+            <!-- HEADER -->
+
+            <Border Grid.Row="0"
+                    Background="#1565C0"
+                    Margin="5">
+
+                <TextBlock Text="Cyber Security Awareness Chatbot"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+
+            </Border>
+
+            <!-- CHAT -->
+
+            <TextBox Name="ChatArea"
+                     Grid.Row="1"
+                     Margin="10"
+                     FontSize="15"
                      IsReadOnly="True"
                      TextWrapping="Wrap"
-                     VerticalScrollBarVisibility="Auto"
-                     Margin="10"/>
+                     VerticalScrollBarVisibility="Auto"/>
 
             <!-- INPUT -->
-            <Grid Grid.Row="1">
+
+            <Grid Grid.Row="2">
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="120"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBox x:Name="UserInput"
-                         FontSize="16"
-                         Margin="10"/>
+                <TextBox Name="UserInput"
+                         Grid.Column="0"
+                         Margin="10"
+                         FontSize="15"/>
 
-                <Button x:Name="SendButton"
+                <Button Name="SendButton"
                         Grid.Column="1"
-                        Content="Send"
-                        FontSize="16"
                         Margin="10"
+                        Content="Send"
                         Click="SendButton_Click"/>
 
             </Grid>
@@ -127,4 +155,5 @@
         </Grid>
 
     </Grid>
+
 </Window>
