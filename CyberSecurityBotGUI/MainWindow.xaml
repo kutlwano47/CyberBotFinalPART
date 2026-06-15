@@ -6,7 +6,7 @@
         Width="1100"
         WindowStartupLocation="CenterScreen">
 
-    <Grid Background="#EAEFF2">
+    <Grid Background="DarkSlateGray">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="139"/>
@@ -18,7 +18,7 @@
         <ScrollViewer Grid.Column="0"
               VerticalScrollBarVisibility="Auto"
               HorizontalScrollBarVisibility="Disabled" Grid.ColumnSpan="2" Margin="0,0,56,0" Height="684" VerticalAlignment="Bottom">
-            <StackPanel Grid.Column="0" Background="#263238" Grid.ColumnSpan="2" Margin="-5,-10,5,10" RenderTransformOrigin="0.509,0.463" Width="173">
+            <StackPanel Grid.Column="0" Background="DarkSlateGray" Grid.ColumnSpan="2" Margin="-5,-10,5,10" RenderTransformOrigin="0.509,0.463" Width="173">
 
                 <!-- BOT IMAGE -->
 
@@ -38,30 +38,35 @@
                     Content=" Phishing"
                     Margin="8"
                     Height="40"
+                    Background="#1565C0"
                     Click="PhishingButton_Click"/>
 
                 <Button x:Name="MalwareButton"
                     Content=" Malware"
                     Margin="8"
                     Height="40"
+                     Background="Red"
                     Click="MalwareButton_Click"/>
 
                 <Button x:Name="PasswordButton"
                     Content=" Password Safety"
                     Margin="8"
                     Height="40"
+                         Background="Green"
                     Click="PasswordButton_Click"/>
 
                 <Button x:Name="PrivacyButton"
                     Content=" Privacy"
                     Margin="8"
                     Height="40"
+                     Background="Yellow"
                     Click="PrivacyButton_Click"/>
 
                 <Button x:Name="ScamButton"
                     Content=" Scam Awareness"
                     Margin="8"
                     Height="40"
+                     Background="HotPink"
                     Click="ScamButton_Click"/>
 
                 <Separator Margin="10"/>
@@ -72,30 +77,35 @@
                     Content=" Add Task"
                     Margin="8"
                     Height="40"
+                    Background="#1565C0"
                     Click="AddTaskButton_Click"/>
 
                 <Button x:Name="ViewTaskButton"
                     Content="View Tasks"
                     Margin="8"
                     Height="40"
+                    Background="Red"
                     Click="ViewTaskButton_Click"/>
 
                 <Button x:Name="QuizButton"
                     Content=" Start Quiz"
                     Margin="8"
                     Height="40"
+                      Background="Green"
                     Click="QuizButton_Click"/>
 
                 <Button x:Name="LogButton"
                     Content="Activity Log"
                     Margin="8"
                     Height="40"
+                      Background="Yellow"
                     Click="LogButton_Click"/>
 
                 <Button x:Name="ClearButton"
                     Content="Clear Chat"
                     Margin="8"
                     Height="40"
+                     Background="HotPink"
                     Click="ClearButton_Click"/>
 
             </StackPanel>
@@ -115,13 +125,13 @@
             <!-- HEADER -->
 
             <Border Grid.Row="0"
-                    Background="#1565C0"
+                    Background="Red"
                     Margin="5">
 
                 <TextBlock Text="Cyber Security Awareness Chatbot"
                            FontSize="22"
                            FontWeight="Bold"
-                           Foreground="White"
+                           Foreground="Blue"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"/>
 
@@ -135,6 +145,7 @@
                      FontSize="15"
                      IsReadOnly="True"
                      TextWrapping="Wrap"
+                      Background="LimeGreen"
                      VerticalScrollBarVisibility="Auto"/>
 
             <!-- INPUT -->
@@ -149,12 +160,14 @@
                 <TextBox Name="UserInput"
                          Grid.Column="0"
                          Margin="10"
+                          Background="AntiqueWhite"
                          FontSize="15"/>
 
                 <Button Name="SendButton"
                         Grid.Column="1"
                         Margin="10"
                         Content="Send"
+                         Background="blue"
                         Click="SendButton_Click"/>
 
             </Grid>
