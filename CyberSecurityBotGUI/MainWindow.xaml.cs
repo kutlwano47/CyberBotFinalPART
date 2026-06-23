@@ -23,6 +23,8 @@ namespace CyberSecurityBotGUI
 
         NLPManager nlpManager = new NLPManager();
 
+        DatabaseManager databaseManager = new DatabaseManager();
+
         bool askedFavoriteTopic = false;
 
         bool quizRunning = false;
@@ -257,24 +259,33 @@ private void SendButton_Click(object sender, RoutedEventArgs e)
             UserInput.Clear();
         }
 
-        
-private void AddTaskButton_Click(object sender, RoutedEventArgs e)
+
+        private void AddTaskButton_Click(object sender, RoutedEventArgs e)
         {
-            taskManager.AddTask(
-                "Review Privacy Settings",
-                "Check all social media privacy settings.",
+            databaseManager.AddTask(
+                "Enable 2FA",
+                "Enable two-factor authentication",
                 "7 days");
 
-            activityLogger.AddLog("Task Added");
+            BotReply("Task saved to MySQL database.");
 
-            BotReply("Task added successfully!");
+            activityLogger.AddLog("Task added to database.");
         }
 
         private void ViewTaskButton_Click(object sender, RoutedEventArgs e)
         {
-            BotReply(taskManager.ViewTasks());
+            var tasks = databaseManager.GetTasks();
 
-            activityLogger.AddLog("Viewed Tasks");
+            if (tasks.Count == 0)
+            {
+                BotReply("No tasks found.");
+                return;
+            }
+
+            foreach (var task in tasks)
+            {
+                BotReply(task);
+            }
         }
 
         private void QuizButton_Click(object sender, RoutedEventArgs e)

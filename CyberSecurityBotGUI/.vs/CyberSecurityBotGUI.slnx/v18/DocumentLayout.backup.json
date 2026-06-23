@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5089E65C-04A2-AF16-96B2-A719241DE985}|CyberSecurityBotGUI.csproj|c:\\users\\student\\documents\\github\\cyberbotfinalpart\\cybersecuritybotgui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5089E65C-04A2-AF16-96B2-A719241DE985}|CyberSecurityBotGUI.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5089E65C-04A2-AF16-96B2-A719241DE985}|CyberSecurityBotGUI.csproj|c:\\users\\student\\documents\\github\\cyberbotfinalpart\\cybersecuritybotgui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5089E65C-04A2-AF16-96B2-A719241DE985}|CyberSecurityBotGUI.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5089E65C-04A2-AF16-96B2-A719241DE985}|CyberSecurityBotGUI.csproj|c:\\users\\student\\documents\\github\\cyberbotfinalpart\\cybersecuritybotgui\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5089E65C-04A2-AF16-96B2-A719241DE985}|CyberSecurityBotGUI.csproj|solutionrelative:databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5089E65C-04A2-AF16-96B2-A719241DE985}|CyberSecurityBotGUI.csproj|c:\\users\\student\\documents\\github\\cyberbotfinalpart\\cybersecuritybotgui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5089E65C-04A2-AF16-96B2-A719241DE985}|CyberSecurityBotGUI.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5089E65C-04A2-AF16-96B2-A719241DE985}|CyberSecurityBotGUI.csproj|c:\\users\\student\\documents\\github\\cyberbotfinalpart\\cybersecuritybotgui\\quizmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,31 +70,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ActivityLogger.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\ActivityLogger.cs",
-              "RelativeDocumentMoniker": "ActivityLogger.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\ActivityLogger.cs",
-              "RelativeToolTip": "ActivityLogger.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAkwCIAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DatabaseManager.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\DatabaseManager.cs",
+              "RelativeDocumentMoniker": "DatabaseManager.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\DatabaseManager.cs",
+              "RelativeToolTip": "DatabaseManager.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwDkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:11:14.933Z"
+              "WhenOpened": "2026-06-23T16:17:41.981Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QuizManager.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\QuizManager.cs",
-              "RelativeDocumentMoniker": "QuizManager.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\QuizManager.cs",
-              "RelativeToolTip": "QuizManager.cs",
-              "ViewState": "AgIAAGkAAACwZmZmZiYowIMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:10:34.945Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "QuizQuestion.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\QuizQuestion.cs",
               "RelativeDocumentMoniker": "QuizQuestion.cs",
@@ -98,11 +91,12 @@
               "RelativeToolTip": "QuizQuestion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:09:27.007Z"
+              "WhenOpened": "2026-06-12T09:09:27.007Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TaskManager.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\TaskManager.cs",
               "RelativeDocumentMoniker": "TaskManager.cs",
@@ -110,11 +104,12 @@
               "RelativeToolTip": "TaskManager.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAkwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:08:19.548Z"
+              "WhenOpened": "2026-06-12T09:08:19.548Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ResponseManager.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\ResponseManager.cs",
               "RelativeDocumentMoniker": "ResponseManager.cs",
@@ -122,11 +117,12 @@
               "RelativeToolTip": "ResponseManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T08:50:14.931Z"
+              "WhenOpened": "2026-06-12T08:50:14.931Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -138,19 +134,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAEsBAABAZWZmZuYjwFEBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAPcAAACAzczMzOwwwCABAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T19:26:00.13Z"
+              "WhenOpened": "2026-06-05T19:26:00.13Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "ActivityLogger.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\ActivityLogger.cs",
+              "RelativeDocumentMoniker": "ActivityLogger.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\ActivityLogger.cs",
+              "RelativeToolTip": "ActivityLogger.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAkwCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T09:11:14.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuizManager.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\QuizManager.cs",
+              "RelativeDocumentMoniker": "QuizManager.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\QuizManager.cs",
+              "RelativeToolTip": "QuizManager.cs",
+              "ViewState": "AgIAAGkAAACwZmZmZiYowIMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T09:10:34.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "NLPManager.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\NLPManager.cs",
               "RelativeDocumentMoniker": "NLPManager.cs",
@@ -158,11 +181,12 @@
               "RelativeToolTip": "NLPManager.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAkwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:11:45.543Z"
+              "WhenOpened": "2026-06-12T09:11:45.543Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TaskItem.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\TaskItem.cs",
               "RelativeDocumentMoniker": "TaskItem.cs",
@@ -170,11 +194,12 @@
               "RelativeToolTip": "TaskItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:07:56.242Z"
+              "WhenOpened": "2026-06-12T09:07:56.242Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "KeywordManager.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\KeywordManager.cs",
               "RelativeDocumentMoniker": "KeywordManager.cs",
@@ -182,11 +207,12 @@
               "RelativeToolTip": "KeywordManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T08:50:04.852Z"
+              "WhenOpened": "2026-06-12T08:50:04.852Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -194,11 +220,12 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T19:28:48.17Z"
+              "WhenOpened": "2026-06-05T19:28:48.17Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "SoundManager.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\SoundManager.cs",
               "RelativeDocumentMoniker": "SoundManager.cs",
@@ -206,11 +233,12 @@
               "RelativeToolTip": "SoundManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T19:28:08.661Z"
+              "WhenOpened": "2026-06-05T19:28:08.661Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "SentimentManager.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\SentimentManager.cs",
               "RelativeDocumentMoniker": "SentimentManager.cs",
@@ -218,7 +246,8 @@
               "RelativeToolTip": "SentimentManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T19:27:02.191Z"
+              "WhenOpened": "2026-06-05T19:27:02.191Z",
+              "EditorCaption": ""
             }
           ]
         }
