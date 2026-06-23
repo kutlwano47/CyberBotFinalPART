@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "DatabaseManager.cs",
               "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\DatabaseManager.cs",
               "RelativeToolTip": "DatabaseManager.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAhwDYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-23T16:17:41.981Z",
               "EditorCaption": ""
@@ -91,8 +91,7 @@
               "RelativeToolTip": "QuizQuestion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:09:27.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T09:09:27.007Z"
             },
             {
               "$type": "Document",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "TaskManager.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAkwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:08:19.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T09:08:19.548Z"
             },
             {
               "$type": "Document",
@@ -117,8 +115,7 @@
               "RelativeToolTip": "ResponseManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T08:50:14.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T08:50:14.931Z"
             },
             {
               "$type": "Document",
@@ -129,8 +126,7 @@
               "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\CyberBotFinalPART\\CyberSecurityBotGUI\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-12T08:44:17.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T08:44:17.419Z"
             },
             {
               "$type": "Document",
@@ -142,8 +138,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAP4AAACANDMzM/MlwCABAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T19:26:00.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T19:26:00.13Z"
             },
             {
               "$type": "Document",
@@ -155,8 +150,7 @@
               "RelativeToolTip": "ActivityLogger.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAkwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:11:14.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T09:11:14.933Z"
             },
             {
               "$type": "Document",
@@ -168,8 +162,7 @@
               "RelativeToolTip": "QuizManager.cs",
               "ViewState": "AgIAAGkAAACwZmZmZiYowIMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:10:34.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T09:10:34.945Z"
             },
             {
               "$type": "Document",
@@ -181,8 +174,7 @@
               "RelativeToolTip": "NLPManager.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAkwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:11:45.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T09:11:45.543Z"
             },
             {
               "$type": "Document",
@@ -194,8 +186,7 @@
               "RelativeToolTip": "TaskItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T09:07:56.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T09:07:56.242Z"
             },
             {
               "$type": "Document",
@@ -207,8 +198,7 @@
               "RelativeToolTip": "KeywordManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T08:50:04.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T08:50:04.852Z"
             },
             {
               "$type": "Document",
@@ -220,8 +210,7 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T19:28:48.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T19:28:48.17Z"
             },
             {
               "$type": "Document",
@@ -233,8 +222,7 @@
               "RelativeToolTip": "SoundManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T19:28:08.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T19:28:08.661Z"
             },
             {
               "$type": "Document",
@@ -246,8 +234,7 @@
               "RelativeToolTip": "SentimentManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T19:27:02.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T19:27:02.191Z"
             }
           ]
         }
